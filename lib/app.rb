@@ -14,8 +14,6 @@ get '/covid/' do
 end
 
 get '/dog/' do
-  "<div style='border: 6px dashed blue'>
-    <img src='https://i.pinimg.com/originals/81/fa/18/81fa18892e04b4aac4a757dab8b2d789.png'
-    >
-  </div>"
+  @random_name = ["Amigo", "Oscar", "Viking", "Kylo"].sample
+  erb :index
 end
