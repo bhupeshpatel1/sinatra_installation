@@ -13,7 +13,13 @@ get '/covid/' do
   "I got you!!!"
 end
 
-get '/dog/' do
+get '/random-dog' do
   @random_name = ["Amigo", "Oscar", "Viking", "Kylo"].sample
+  erb :index
+end
+
+get '/named-dog' do
+  p params
+  @random_name = params[:name]
   erb :index
 end
